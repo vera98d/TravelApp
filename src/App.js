@@ -1,3 +1,4 @@
+import { Routes, Route, Navigate } from "react-router-dom";
 import styled from "styled-components";
 
 const Container = styled.div`
@@ -6,7 +7,24 @@ const Container = styled.div`
 `;
 
 function App() {
-  return <Container />;
+  return (
+    <Routes>
+      <Route path="/team-jo-project-2">
+        <Route index element={<Container>Intro</Container>} />
+        <Route
+          exact
+          path="provinces"
+          element={<Container>Map of provinces</Container>}
+        />
+        <Route
+          exact
+          path="provinces/:provinceId"
+          element={<Container>Province details</Container>}
+        />
+        <Route path="*" element={<Navigate to="provinces" replace />} />
+      </Route>
+    </Routes>
+  );
 }
 
 export default App;
