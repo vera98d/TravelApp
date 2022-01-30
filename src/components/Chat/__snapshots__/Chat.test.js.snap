@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Chat is rendering expected elements 1`] = `
+<div>
+  <div
+    class="sc-bdvvtL zuYvb"
+  >
+    <h3
+      class="sc-gsDKAQ kvicPS"
+    >
+      Chat with another travellers
+    </h3>
+    <ul
+      class="sc-dkPtRN dlCOJK"
+    >
+      <li
+        class="sc-gKclnd dSaOsm"
+      >
+        hello
+      </li>
+      <li
+        class="sc-gKclnd dSaOsm"
+      >
+        Qui sunt duis adipisicing veniam eiusmod adipisicing dolore duis veniam enim cillum tempor tempor. Eu aliqua irure sint fugiat anim esse aute cupidatat id. Aute pariatur laboris qui reprehenderit consequat dolore in nisi aute incididunt cillum deserunt consectetur nostrud. Tempor quis aliqua laboris culpa magna occaecat Lorem deserunt deserunt. Aute dolore cillum veniam velit amet ipsum qui eiusmod cupidatat non consequat aliqua mollit.
+      </li>
+      <li
+        class="sc-gKclnd exXZDN"
+      >
+        hi there
+      </li>
+    </ul>
+    <div
+      class="sc-hKwDye kqlCHx"
+    >
+      <input
+        class="sc-eCImPb jgNCLy"
+      />
+      <button
+        class="sc-jRQBWg hgJnAY"
+        type="button"
+      >
+        <svg>
+          send_icon.svg
+        </svg>
+      </button>
+    </div>
+  </div>
+</div>
+`;
