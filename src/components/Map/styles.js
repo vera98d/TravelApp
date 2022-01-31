@@ -1,7 +1,7 @@
 import { MapContainer } from "react-leaflet";
 import styled from "styled-components";
 
-export const MyMap = styled(MapContainer)`
+export const StyledMap = styled(MapContainer)`
   width: 500px;
   height: 500px;
 `;
