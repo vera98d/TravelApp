@@ -1,46 +1,42 @@
 import { TileLayer, GeoJSON } from "react-leaflet";
-
 import provinces from "./wojewodztwa-medium.json";
-import {
-  StyledMap,
-  DefaultProvince,
-  SelectedProvince,
-  HoveredProvince,
-} from "./styles.js";
-
-let previousClickedLayer = null;
-let previousHoveredLayer = null;
-
-function onEachProvince(province, layer) {
-  layer.on({
-    click: (event) => {
-      if (previousClickedLayer !== null) {
-        previousClickedLayer.setStyle(DefaultProvince);
-      }
-      event.target.setStyle(SelectedProvince);
-      alert("Selected province: " + event.target.feature.properties.nazwa);
-      previousClickedLayer = event.target;
-    },
-
-    mouseover: (event) => {
-      if (
-        event.target !== previousClickedLayer ||
-        previousHoveredLayer === null
-      ) {
-        event.target.setStyle(HoveredProvince);
-      }
-      previousHoveredLayer = event.target;
-    },
-
-    mouseout: (event) => {
-      if (previousHoveredLayer !== previousClickedLayer) {
-        previousHoveredLayer.setStyle(DefaultProvince);
-      }
-    },
-  });
-}
+import { StyledMap, DefaultProvince, HoveredProvince } from "./styles.js";
+import { useNavigate } from "react-router-dom";
 
 const Map = () => {
+  let navigate = useNavigate();
+  const OnEachProvince = (
+    province,
+    layer,
+    previousClickedLayer,
+    previousHoveredLayer
+  ) => {
+    layer.on({
+      click: (event) => {
+        navigate(
+          `/team-jo-project-2/provinces/${event.target.feature.properties.id}`,
+          { state: { province: event.target.feature.properties.nazwa } }
+        );
+      },
+
+      mouseover: (event) => {
+        if (
+          event.target !== previousClickedLayer ||
+          previousHoveredLayer === null
+        ) {
+          event.target.setStyle(HoveredProvince);
+        }
+        previousHoveredLayer = event.target;
+      },
+
+      mouseout: (event) => {
+        if (previousHoveredLayer !== previousClickedLayer) {
+          previousHoveredLayer.setStyle(DefaultProvince);
+        }
+      },
+    });
+  };
+
   return (
     <StyledMap
       center={[51.918904, 19.1343786]}
@@ -54,7 +50,7 @@ const Map = () => {
       <GeoJSON
         data={provinces.features}
         pathOptions={DefaultProvince}
-        onEachFeature={onEachProvince}
+        onEachFeature={OnEachProvince}
       />
     </StyledMap>
   );
