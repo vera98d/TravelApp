@@ -12,7 +12,10 @@ export const theme = {
     white: "#fff",
     primaryUi: "#BF7D65C4",
     secondaryUi: "#BF7D652B",
+    thirdUi: "rgba(218, 229, 229, 0.26)",
+    fourthUi: "#DAE5E5",
   },
+
   fontFamily: {
     primaryFont: "Bebas Neue, cursive",
     secondaryFont: "Crimson Pro, serif",

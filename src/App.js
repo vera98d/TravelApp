@@ -1,7 +1,8 @@
 import { Routes, Route, Navigate } from "react-router-dom";
 import styled from "styled-components";
+import { ListOfHistoryEntries } from "./components/ListOfHistoryEntries/index";
 import { Chat } from "./components/Chat/Chat";
-import { messagesMock, myIdMock } from "./components/Chat/mocks";
+import { myIdMock } from "./components/Chat/mocks";
 
 const Container = styled.div`
   background-color: ${(props) => props.theme.colors.white};
@@ -21,12 +22,16 @@ function App() {
         <Route
           exact
           path="provinces/:provinceId"
-          element={<Container>Province details <Chat myId={myIdMock} /></Container>}
+          element={
+            <Container>
+              <ListOfHistoryEntries /> <Chat myId={myIdMock} />
+            </Container>
+          }
         />
         <Route path="*" element={<Navigate to="provinces" replace />} />
       </Route>
     </Routes>
- );
+  );
 }
 
 export default App;
