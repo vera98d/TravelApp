@@ -1,9 +1,28 @@
 import { createGlobalStyle, css } from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
-  body {
+  * {
     margin: 0;
-    font-family: ${(props) => props.theme.fontFamily.secondaryFont} 
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  button {
+    display:block;
+    background: rgba(191, 125, 101, 0.77);
+    color: white;
+    padding: 0.75em 2em;
+    border-radius: 10px;
+    border:none;
+    cursor: pointer;
+
+    &:hover{
+        background: #DF9B89;
+    }
+
+    @media only screen and (orientation: landscape) and (max-width:750px) {
+      padding: 0.5em 1.5em;
+    }
   }
 `;
 
