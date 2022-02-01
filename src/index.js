@@ -6,6 +6,7 @@ import { BrowserRouter } from "react-router-dom";
 import { ThemeProvider } from "styled-components";
 import { theme, GlobalStyle } from "./styles";
 import { ModalContextProvider } from "./contexts/ModalContextProvider";
+import Modal from "./components/Modal/";
 
 ReactDOM.render(
   <React.StrictMode>
@@ -14,6 +15,7 @@ ReactDOM.render(
       <BrowserRouter>
         <ModalContextProvider>
           <App />
+          <Modal />
         </ModalContextProvider>
       </BrowserRouter>
     </ThemeProvider>

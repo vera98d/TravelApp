@@ -5,6 +5,10 @@ import closeButton from "./img/closeButton.svg";
 
 function Modal() {
   const modalContext = useContext(ModalContext);
+  if (!modalContext.displayedComponent) {
+    return null;
+  }
+
   return (
     <>
       <ModalOverlay
