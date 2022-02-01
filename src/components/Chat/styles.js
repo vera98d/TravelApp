@@ -4,7 +4,7 @@ import { scrollbarStyles } from "../../styles";
 export const Container = styled.div`
   background-color: ${(props) => props.theme.colors.secondaryUi};
   height: 700px;
-  width: 50vw;
+  width: 40vw;
   border-radius: 15px;
   display: flex;
   flex-direction: column;
