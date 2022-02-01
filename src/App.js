@@ -1,5 +1,7 @@
 import { Routes, Route, Navigate } from "react-router-dom";
 import styled from "styled-components";
+import Map from "./components/Map";
+import { Header } from "./components/Header";
 import ProvincePage from "./pages/ProvincePage";
 
 const Container = styled.div`
@@ -15,7 +17,16 @@ function App() {
         <Route
           exact
           path="provinces"
-          element={<Container>Map of provinces</Container>}
+          element={
+            <Container>
+              <Header
+                title="choose your destination and click"
+                subtitle="to start your adventure"
+                isBackButtonVisible={false}
+              />
+              <Map />
+            </Container>
+          }
         />
         <Route exact path="provinces/:provinceId" element={<ProvincePage />} />
         <Route path="*" element={<Navigate to="provinces" replace />} />

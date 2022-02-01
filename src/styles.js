@@ -29,8 +29,10 @@ export const GlobalStyle = createGlobalStyle`
 export const theme = {
   colors: {
     white: "#fff",
+    headerBackground: "#DAE5E5",
     primaryUi: "#BF7D65C4",
     secondaryUi: "#BF7D652B",
+    tertiaryUi: "#C4C4C4",
     thirdUi: "rgba(218, 229, 229, 0.26)",
     fourthUi: "#DAE5E5",
   },
