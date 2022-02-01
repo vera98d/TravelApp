@@ -1,5 +1,6 @@
 import { Routes, Route, Navigate } from "react-router-dom";
 import styled from "styled-components";
+import { Intro } from "./components/Intro";
 import Map from "./components/Map";
 import { Header } from "./components/Header";
 import ProvincePage from "./pages/ProvincePage";
@@ -13,7 +14,14 @@ function App() {
   return (
     <Routes>
       <Route path="/team-jo-project-2">
-        <Route index element={<Container>Intro</Container>} />
+        <Route
+          index
+          element={
+            <Container>
+              <Intro />
+            </Container>
+          }
+        />
         <Route
           exact
           path="provinces"
