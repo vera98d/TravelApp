@@ -3,23 +3,22 @@ import { scrollbarStyles } from "../../styles";
 
 export const Container = styled.div`
   background-color: ${(props) => props.theme.colors.secondaryUi};
-  height: 700px;
-  width: 40vw;
+  min-height: 600px;
+  max-height: 100%;
   border-radius: 15px;
   display: flex;
   flex-direction: column;
-  max-height: 100vh;
   box-sizing: border-box;
 `;
 
 export const Header = styled.h3`
   text-align: center;
   background-color: ${(props) => props.theme.colors.primaryUi};
-  border-radius: 15px 15px 0 0;
-  padding: 10px;
+  border-radius: 12px 12px 0 0;
+  padding: 15px;
   margin: 0;
-  font-size: 20px;
-  font-weight: 500;
+  font-size: 30px;
+  font-weight: 1000;
   font-family: ${(props) => props.theme.fontFamily.secondaryFont};
 `;
 
@@ -69,6 +68,8 @@ export const Message = styled.li`
     props.isOwn ? "10px 0 10px 10px" : "0 10px 10px 10px"};
   padding: 15px;
   margin: 5px;
-  font-size: 15px;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 22px;
   align-self: ${(props) => (props.isOwn ? "flex-end" : "flex-start")};
 `;

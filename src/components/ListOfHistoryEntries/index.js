@@ -7,7 +7,7 @@ import HistoryEntry from "../HistoryEntry";
 
 const getEntries = async () => entriesMock;
 
-export const ListOfHistoryEntries = () => {
+export const ListOfHistoryEntries = (props) => {
   const [entriesState, setEntriesState] = useState([]);
 
   const modalContext = useContext(ModalContext);
@@ -19,7 +19,7 @@ export const ListOfHistoryEntries = () => {
   }, []);
 
   return (
-    <Container>
+    <Container className={props.className}>
       <Header>History of entries</Header>
       <EntriesList>
         {entriesState.map((entry) => {

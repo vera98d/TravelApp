@@ -1,4 +1,4 @@
-import { createGlobalStyle, css } from "styled-components";
+import styled, { createGlobalStyle, css } from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
   * {
@@ -7,20 +7,7 @@ export const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
   }
 
-  button {
-    display:block;
-    background: rgba(191, 125, 101, 0.77);
-    color: white;
-    padding: 0.75em 2em;
-    border-radius: 10px;
-    border:none;
-    cursor: pointer;
-
-    &:hover{
-        background: #DF9B89;
-    }
-
-    @media only screen and (orientation: landscape) and (max-width:750px) {
+  @media only screen and (orientation: landscape) and (max-width:750px) {
       padding: 0.5em 1.5em;
     }
   }
@@ -45,14 +32,32 @@ export const theme = {
 
 export const scrollbarStyles = css`
   &::-webkit-scrollbar {
-    width: 10px;
+    width: ${(props) => props.width || "10px"};
   }
   &::-webkit-scrollbar-thumb {
-    background: ${(props) => props.theme.colors.primaryUi};
-    border-radius: 5px;
+    background: ${(props) => props.thumbColor || props.theme.colors.primaryUi};
+    border-radius: calc(${(props) => props.width || "10px"} / 2);
   }
   &::-webkit-scrollbar-track {
-    background: ${(props) => props.theme.colors.white};
-    border-radius: 5px;
+    background: ${(props) => props.trackColor || props.theme.colors.white};
+    border-radius: calc(${(props) => props.width || "10px"} / 2);
+  }
+`;
+
+export const PrimaryButton = styled.button`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: ${(props) => props.theme.colors.primaryUi};
+  color: ${(props) => props.theme.colors.white};
+  font-family: ${(props) => props.theme.fontFamily.secondaryFont};
+  font-size: 18px;
+  padding: 0.75em 2em;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+
+  &:hover {
+    background: #df9b89;
   }
 `;

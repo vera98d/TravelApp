@@ -3,40 +3,40 @@
 exports[`Chat is rendering expected elements 1`] = `
 <div>
   <div
-    class="sc-bdvvtL fkKtUC"
+    class="sc-gsDKAQ hRZfYm"
   >
     <h3
-      class="sc-gsDKAQ kvicPS"
+      class="sc-dkPtRN bEkuiS"
     >
       Chat with another travellers
     </h3>
     <ul
-      class="sc-dkPtRN dlCOJK"
+      class="sc-hKwDye ijPRFt"
     >
       <li
-        class="sc-gKclnd dSaOsm"
+        class="sc-iCfMLu jtbSft"
       >
         hello
       </li>
       <li
-        class="sc-gKclnd dSaOsm"
+        class="sc-iCfMLu jtbSft"
       >
         Qui sunt duis adipisicing veniam eiusmod adipisicing dolore duis veniam enim cillum tempor tempor. Eu aliqua irure sint fugiat anim esse aute cupidatat id. Aute pariatur laboris qui reprehenderit consequat dolore in nisi aute incididunt cillum deserunt consectetur nostrud. Tempor quis aliqua laboris culpa magna occaecat Lorem deserunt deserunt. Aute dolore cillum veniam velit amet ipsum qui eiusmod cupidatat non consequat aliqua mollit.
       </li>
       <li
-        class="sc-gKclnd exXZDN"
+        class="sc-iCfMLu egetii"
       >
         hi there
       </li>
     </ul>
     <div
-      class="sc-hKwDye kqlCHx"
+      class="sc-eCImPb fSeyYp"
     >
       <input
-        class="sc-eCImPb jgNCLy"
+        class="sc-jRQBWg jDqGAV"
       />
       <button
-        class="sc-jRQBWg hgJnAY"
+        class="sc-gKclnd kPmtOO"
         type="button"
       >
         <svg>

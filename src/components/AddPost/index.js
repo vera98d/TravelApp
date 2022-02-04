@@ -2,6 +2,7 @@ import React from "react";
 import { Form, Input, TextArea, ButtonGroup, ErrorMessage } from "./style";
 import useForm from "./useForm";
 import ImageInput from "../ImageInput";
+import { PrimaryButton } from "../../styles";
 
 function AddPost() {
   const { handleChange, values, handleSubmit, errors, handleImage } = useForm();
@@ -43,7 +44,7 @@ function AddPost() {
 
         <ButtonGroup>
           <ImageInput onChange={handleImage} />
-          <button type="submit">Add story</button>
+          <PrimaryButton type="submit">Add story</PrimaryButton>
         </ButtonGroup>
       </Form>
     </>

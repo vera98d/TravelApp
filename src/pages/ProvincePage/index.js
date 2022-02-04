@@ -1,6 +1,9 @@
-import { Container, WrapContainer, Wrapper } from "./styles";
-import { ListOfHistoryEntries } from "../../components/ListOfHistoryEntries";
-import { Chat } from "../../components/Chat/Chat";
+import {
+  Container,
+  StyledChat,
+  StyledListOfHistoryEntries,
+  Wrapper,
+} from "./styles";
 import { myIdMock } from "../../components/Chat/mocks";
 import { Header } from "../../components/Header";
 import { useParams, useLocation } from "react-router-dom";
@@ -16,7 +19,7 @@ const ProvincePage = () => {
         isBackButtonVisible
       />
       <Wrapper>
-        <ListOfHistoryEntries /> <Chat myId={myIdMock} />
+        <StyledListOfHistoryEntries /> <StyledChat myId={myIdMock} />
       </Wrapper>
     </Container>
   );
