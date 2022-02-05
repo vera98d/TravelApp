@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 
 export const Form = styled.form`
   width: 100%;
@@ -111,4 +111,72 @@ export const FileInput = styled.input`
 export const ImagePreview = styled.img`
   max-width: 60px;
   max-height: 60px;
+`;
+
+const rotate360 = keyframes`
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+`;
+
+export const Spinner = styled.div`
+  animation: ${rotate360} 1s linear infinite;
+  transform: translateZ(0);
+
+  border-top: 2px solid #dae5e5;
+  border-right: 2px solid #dae5e5;
+  border-bottom: 2px solid #b1e0d9;
+  border-left: 4px solid #92d6ca;
+  background: transparent;
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+`;
+
+const appear = keyframes`
+  from {
+    opacity:0;
+  }
+  to {
+    opacity:100%;
+  }
+`;
+
+export const FlexColContainer = styled.div`
+  width: ${(props) => props.width};
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: ${(props) => props.align};
+  justify-content: center;
+  gap: ${(props) => props.gap};
+  animation: ${appear} 0.8s;
+`;
+
+export const FlexRowContainer = styled(FlexColContainer)`
+  flex-direction: row;
+  justify-content: space-around;
+  gap: 4em;
+`;
+
+export const UploadedImg = styled.img`
+  width: 25%;
+  max-height: 100%;
+`;
+
+export const H1 = styled.h1`
+  font-family: ${(props) => props.theme.fontFamily.secondaryFont};
+  font-size: 2.8rem;
+  color: ${(props) => props.theme.colors.primaryUi};
+  text-align: left;
+  line-height: 130%;
+`;
+
+export const Span = styled.span`
+  font-family: ${(props) => props.theme.fontFamily.secondaryFont};
+  font-size: 2.8rem;
+  color: #b1e0d9;
 `;

@@ -10,6 +10,7 @@ function useForm() {
   });
 
   const [errors, setErrors] = useState({});
+  const [loading, setLoading] = useState("notLoading");
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -35,11 +36,13 @@ function useForm() {
     data.append("file", values.image);
     data.append("upload_preset", "memoryPictures");
 
+    setLoading("loading");
     await fetch("https://api.cloudinary.com/v1_1/dagaqrq8j/image/upload", {
       method: "POST",
       body: data,
       "Content-Type": "application/json",
     });
+    setLoading("loaded");
   };
 
   const handleSubmit = (e) => {
@@ -47,9 +50,8 @@ function useForm() {
     setErrors(validateForm(values));
 
     if (Object.keys(errors).length === 0) {
-      console.log(errors);
-      saveValues();
       values.image && uploadImage();
+      saveValues();
     }
   };
 
@@ -59,6 +61,7 @@ function useForm() {
     handleSubmit,
     errors,
     handleImage,
+    loading,
   };
 }
 

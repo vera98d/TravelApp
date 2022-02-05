@@ -8,10 +8,10 @@ const StyledModal = styled.div`
   border-radius: 30px;
   padding: 2em 3em;
   text-align: center;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  position: fixed;
+  top: 50vh;
+  left: 50vw;
+  transform: translate(-5vw, -50vh);
   z-index: 3;
   animation: slideIn 0.8s both ease-in-out;
 
@@ -49,9 +49,9 @@ const StyledModal = styled.div`
 `;
 
 export const ModalOverlay = styled.div`
-  width: 100vw;
+  width: 100%;
   height: 100vh;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   background: rgba(255, 255, 255, 0.66);
