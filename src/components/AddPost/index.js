@@ -17,9 +17,9 @@ import ImageInput from "../ImageInput";
 import uploadImg from "./img/upload.svg";
 import { PrimaryButton } from "../../styles";
 
-function AddPost() {
+function AddPost(props) {
   const { handleChange, values, handleSubmit, errors, handleImage, loading } =
-    useForm();
+    useForm(props.province);
 
   if (loading === "loading") {
     return (
@@ -86,6 +86,7 @@ function AddPost() {
             <ImageInput onChange={handleImage} />
             <PrimaryButton type="submit">Add story</PrimaryButton>
           </ButtonGroup>
+          {errors.image && <ErrorMessage>{errors.image}</ErrorMessage>}
         </Form>
       </>
     );

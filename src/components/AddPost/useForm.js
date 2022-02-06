@@ -1,7 +1,8 @@
 import { useState } from "react";
 import validateForm from "./validateForm";
+import historyEntriesService from "../../services/HistoryEntriesService";
 
-function useForm() {
+function useForm(province) {
   const [values, setValues] = useState({
     title: "",
     city: "",
@@ -21,39 +22,41 @@ function useForm() {
     setValues({ ...values, image: file });
   };
 
-  const saveValues = () => {
-    alert(
-      `Data you enered:
-            Title: ${values.title},
-            City: ${values.city},
-            Description: ${values.description},
-            Image: ${values.image}`
-    );
-  };
-
   const uploadImage = async () => {
     const data = new FormData();
     data.append("file", values.image);
     data.append("upload_preset", "memoryPictures");
 
     setLoading("loading");
-    await fetch("https://api.cloudinary.com/v1_1/dagaqrq8j/image/upload", {
-      method: "POST",
-      body: data,
-      "Content-Type": "application/json",
-    });
+    const res = await fetch(
+      "https://api.cloudinary.com/v1_1/dagaqrq8j/image/upload",
+      {
+        method: "POST",
+        body: data,
+        "Content-Type": "application/json",
+      }
+    );
     setLoading("loaded");
+    return res.json();
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setErrors(validateForm(values));
 
     if (Object.keys(errors).length === 0) {
-      values.image && uploadImage();
-      saveValues();
+      console.log(errors);
+      const response = await uploadImage();
+      historyEntriesService.insert(
+        values.title,
+        values.city,
+        values.description,
+        response.secure_url,
+        province
+      );
     }
   };
+
 
   return {
     handleChange,

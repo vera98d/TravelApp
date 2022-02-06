@@ -1,11 +1,9 @@
 import { useEffect, useState, useContext } from "react";
-import { entriesMock } from "./mock";
 import { Button, Container, Entry, EntriesList, Header } from "./styles";
 import { ModalContext } from "../../contexts/ModalContextProvider";
 import AddPost from "../AddPost";
 import HistoryEntry from "../HistoryEntry";
-
-const getEntries = async () => entriesMock;
+import historyEntriesService from "../../services/HistoryEntriesService";
 
 export const ListOfHistoryEntries = (props) => {
   const [entriesState, setEntriesState] = useState([]);
@@ -13,7 +11,7 @@ export const ListOfHistoryEntries = (props) => {
   const modalContext = useContext(ModalContext);
 
   useEffect(() => {
-    getEntries().then((data) => {
+    historyEntriesService.getAll(props.province).then((data) => {
       setEntriesState(data);
     });
   }, []);
@@ -47,7 +45,9 @@ export const ListOfHistoryEntries = (props) => {
       <Button
         type="button"
         onClick={() => {
-          modalContext.setDisplayedComponent(<AddPost />);
+          modalContext.setDisplayedComponent(
+            <AddPost province={props.province} />
+          );
         }}
       >
         Create new story
