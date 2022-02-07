@@ -18,6 +18,7 @@ export const StyledHistoryEntry = styled.div`
     height: 25em;
     border-radius: 30px;
     margin-right: 3%;
+    object-fit: cover;
   }
 
   .storyContent {
