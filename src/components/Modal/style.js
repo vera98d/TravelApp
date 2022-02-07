@@ -65,6 +65,7 @@ export const CloseButton = styled.img`
   top: 1em;
   right: 2.5em;
   cursor: pointer;
+  z-index: 99;
 
   &:hover {
     opacity: 0.8;

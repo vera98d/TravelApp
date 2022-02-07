@@ -14,7 +14,7 @@ export const ListOfHistoryEntries = (props) => {
     historyEntriesService.getAll(props.province).then((data) => {
       setEntriesState(data);
     });
-  }, []);
+  }, [props.province]);
 
   return (
     <Container className={props.className}>

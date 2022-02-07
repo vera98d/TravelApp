@@ -8,7 +8,11 @@ const HistoryEntry = (props) => {
         {props.title} - {props.city}
       </h1>
       <div className="storyContent">
-        <img src={props.image} className="currentStoryImage" />
+        <img
+          src={props.image}
+          className="currentStoryImage"
+          alt={props.image}
+        />
         <StyledStoryText>{props.description}</StyledStoryText>
       </div>
     </StyledHistoryEntry>

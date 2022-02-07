@@ -6,10 +6,9 @@ import {
 } from "./styles";
 import { myIdMock } from "../../components/Chat/mocks";
 import { Header } from "../../components/Header";
-import { useParams, useLocation } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 
 const ProvincePage = () => {
-  const params = useParams();
   const location = useLocation();
   return (
     <Container>
