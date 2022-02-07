@@ -44,7 +44,7 @@ function useForm(province) {
     e.preventDefault();
     setErrors(validateForm(values));
 
-    if (Object.keys(errors).length === 0) {
+    if (Object.keys(validateForm(values)).length === 0) {
       const response = await uploadImage();
       historyEntriesService.insert(
         values.title,
