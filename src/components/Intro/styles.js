@@ -26,9 +26,9 @@ export const Title2 = styled.h1`
   margin: 0;
   font-family: ${(props) => props.theme.fontFamily.primaryFont};
   font-weight: 400;
-  font-size: 230px;
+  font-size: 220px;
   color: #260101;
   position: absolute;
-  left: 70px;
+  left: 80px;
   bottom: 0px;
 `;
