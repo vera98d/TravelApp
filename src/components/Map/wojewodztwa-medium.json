@@ -5274,7 +5274,7 @@
           ]
         ]
       },
-      "properties": { "id": 1, "nazwa": "śląskie" },
+      "properties": { "id": 1, "nazwa": "śląskie", "fillColor": "#FBB7B7" },
       "id": 0
     },
     {
@@ -8966,7 +8966,7 @@
           ]
         ]
       },
-      "properties": { "id": 2, "nazwa": "opolskie" },
+      "properties": { "id": 2, "nazwa": "opolskie", "fillColor": "#A16969" },
       "id": 1
     },
     {
@@ -16326,7 +16326,11 @@
           ]
         ]
       },
-      "properties": { "id": 3, "nazwa": "wielkopolskie" },
+      "properties": {
+        "id": 3,
+        "nazwa": "wielkopolskie",
+        "fillColor": "#FBB7B7"
+      },
       "id": 2
     },
     {
@@ -20418,7 +20422,11 @@
           ]
         ]
       },
-      "properties": { "id": 4, "nazwa": "zachodniopomorskie" },
+      "properties": {
+        "id": 4,
+        "nazwa": "zachodniopomorskie",
+        "fillColor": "#7D6767"
+      },
       "id": 3
     },
     {
@@ -23639,7 +23647,11 @@
           ]
         ]
       },
-      "properties": { "id": 5, "nazwa": "świętokrzyskie" },
+      "properties": {
+        "id": 5,
+        "nazwa": "świętokrzyskie",
+        "fillColor": "#E57F7F"
+      },
       "id": 4
     },
     {
@@ -28399,7 +28411,11 @@
           ]
         ]
       },
-      "properties": { "id": 6, "nazwa": "kujawsko-pomorskie" },
+      "properties": {
+        "id": 6,
+        "nazwa": "kujawsko-pomorskie",
+        "fillColor": "#E57F7F"
+      },
       "id": 5
     },
     {
@@ -31887,7 +31903,7 @@
           ]
         ]
       },
-      "properties": { "id": 7, "nazwa": "podlaskie" },
+      "properties": { "id": 7, "nazwa": "podlaskie", "fillColor": "#E57F7F" },
       "id": 6
     },
     {
@@ -37801,7 +37817,11 @@
           ]
         ]
       },
-      "properties": { "id": 8, "nazwa": "dolnośląskie" },
+      "properties": {
+        "id": 8,
+        "nazwa": "dolnośląskie",
+        "fillColor": "#7D6767"
+      },
       "id": 7
     },
     {
@@ -42146,7 +42166,11 @@
           ]
         ]
       },
-      "properties": { "id": 9, "nazwa": "podkarpackie" },
+      "properties": {
+        "id": 9,
+        "nazwa": "podkarpackie",
+        "fillColor": "#7D6767"
+      },
       "id": 8
     },
     {
@@ -47570,7 +47594,11 @@
           ]
         ]
       },
-      "properties": { "id": 10, "nazwa": "małopolskie" },
+      "properties": {
+        "id": 10,
+        "nazwa": "małopolskie",
+        "fillColor": "#A16969"
+      },
       "id": 9
     },
     {
@@ -51722,7 +51750,7 @@
           ]
         ]
       },
-      "properties": { "id": 11, "nazwa": "pomorskie" },
+      "properties": { "id": 11, "nazwa": "pomorskie", "fillColor": "#A16969" },
       "id": 10
     },
     {
@@ -55425,7 +55453,11 @@
           ]
         ]
       },
-      "properties": { "id": 12, "nazwa": "warmińsko-mazurskie" },
+      "properties": {
+        "id": 12,
+        "nazwa": "warmińsko-mazurskie",
+        "fillColor": "#FBB7B7"
+      },
       "id": 11
     },
     {
@@ -60026,7 +60058,7 @@
           ]
         ]
       },
-      "properties": { "id": 13, "nazwa": "łódzkie" },
+      "properties": { "id": 13, "nazwa": "łódzkie", "fillColor": "#7D6767" },
       "id": 12
     },
     {
@@ -66888,7 +66920,11 @@
           ]
         ]
       },
-      "properties": { "id": 14, "nazwa": "mazowieckie" },
+      "properties": {
+        "id": 14,
+        "nazwa": "mazowieckie",
+        "fillColor": "#A16969"
+      },
       "id": 13
     },
     {
@@ -72624,7 +72660,7 @@
           ]
         ]
       },
-      "properties": { "id": 15, "nazwa": "lubelskie" },
+      "properties": { "id": 15, "nazwa": "lubelskie", "fillColor": "#FBB7B7" },
       "id": 14
     },
     {
@@ -77091,7 +77127,7 @@
           ]
         ]
       },
-      "properties": { "id": 16, "nazwa": "lubuskie" },
+      "properties": { "id": 16, "nazwa": "lubuskie", "fillColor": "#E57F7F" },
       "id": 15
     }
   ]

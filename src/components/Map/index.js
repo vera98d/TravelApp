@@ -1,4 +1,4 @@
-import { TileLayer, GeoJSON } from "react-leaflet";
+import { GeoJSON } from "react-leaflet";
 import provinces from "./wojewodztwa-medium.json";
 import {
   StyledMap,
@@ -11,7 +11,7 @@ import { useNavigate } from "react-router-dom";
 const Map = () => {
   let navigate = useNavigate();
   const OnEachProvince = (
-    province,
+    feature,
     layer,
     previousClickedLayer,
     previousHoveredLayer
@@ -36,7 +36,10 @@ const Map = () => {
 
       mouseout: (event) => {
         if (previousHoveredLayer !== previousClickedLayer) {
-          previousHoveredLayer.setStyle(DefaultProvince);
+          previousHoveredLayer.setStyle({
+            ...DefaultProvince,
+            fillColor: feature.properties.fillColor,
+          });
         }
       },
     });
@@ -48,16 +51,19 @@ const Map = () => {
         center={[51.918904, 19.1343786]}
         zoom={6}
         scrollWheelZoom={false}
+        zoomControl={false}
       >
-        <TileLayer
-          attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-        />
-        <GeoJSON
-          data={provinces.features}
-          pathOptions={DefaultProvince}
-          onEachFeature={OnEachProvince}
-        />
+        {provinces.features.map((feature) => (
+          <GeoJSON
+            key={feature.id}
+            data={feature}
+            pathOptions={{
+              ...DefaultProvince,
+              fillColor: feature.properties.fillColor,
+            }}
+            onEachFeature={OnEachProvince}
+          />
+        ))}
       </StyledMap>
     </Container>
   );

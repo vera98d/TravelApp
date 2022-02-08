@@ -8,25 +8,20 @@ export const Container = styled.div`
 `;
 
 export const StyledMap = styled(MapContainer)`
-  width: 500px;
-  height: 500px;
+  width: 600px;
+  height: 600px;
+  background-color: white;
 `;
 
 export const DefaultProvince = {
-  color: `#620505`,
-  fillColor: "#D42A2A",
-  fillOpacity: 0.3,
+  color: `#fff`,
+  fillColor: "#BF7D65C4",
+  fillOpacity: 1,
   opacity: 1.0,
 };
 
 export const HoveredProvince = {
-  color: `#620505`,
-  fillColor: "#E5E5E5",
+  color: `#fff`,
+  fillColor: "#DAE5E5",
   fillOpacity: 0.7,
-};
-
-export const SelectedProvince = {
-  fillColor: "green",
-  color: "#620505",
-  fillOpacity: 0.4,
 };
