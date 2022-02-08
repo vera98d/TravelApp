@@ -21,6 +21,7 @@ export const Input = styled.input`
   margin-top: 1em;
   border: 0px solid white;
   border-radius: 15px;
+  font-family: ${(props) => props.theme.fontFamily.secondaryFont};
 
   &:focus {
     outline: none;
@@ -48,6 +49,7 @@ export const TextArea = styled.textarea`
   border-radius: 15px;
   resize: none;
   flex-grow: 2;
+  font-family: ${(props) => props.theme.fontFamily.secondaryFont};
 
   &:focus {
     outline: none;
