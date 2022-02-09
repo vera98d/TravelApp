@@ -25,7 +25,7 @@ export const Chat = (props) => {
 
   return (
     <Container className={props.className}>
-      <Header>Chat with another travellers</Header>
+      <Header>Chat with other travellers</Header>
       <MessagesList>
         {messages.map((message) => {
           return (

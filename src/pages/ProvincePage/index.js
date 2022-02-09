@@ -14,7 +14,7 @@ const ProvincePage = () => {
     <Container>
       <Header
         title={location.state.province}
-        subtitle="read entries, create your story and chat with antother travellers"
+        subtitle="read entries, create your story and chat with other travellers"
         isBackButtonVisible
       />
       <Wrapper>

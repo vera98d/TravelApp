@@ -36,7 +36,7 @@ export const ListOfHistoryEntries = (props) => {
                   );
                 }}
               >
-                {entry.title} - {entry.city}
+                {entry.title} – {entry.city}
               </Entry>
             </>
           );
