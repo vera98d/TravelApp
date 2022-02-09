@@ -1,7 +1,7 @@
 import React from "react";
 import { StyledHistoryEntry, StyledStoryText } from "./style";
 
-const HistoryEntry = (props) => {
+export const HistoryEntry = (props) => {
   return (
     <StyledHistoryEntry>
       <h1 className="storyContentTitle">
@@ -18,5 +18,3 @@ const HistoryEntry = (props) => {
     </StyledHistoryEntry>
   );
 };
-
-export default HistoryEntry;

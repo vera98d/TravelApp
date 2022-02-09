@@ -2,7 +2,7 @@ import { useEffect, useState, useContext } from "react";
 import { Button, Container, Entry, EntriesList, Header } from "./styles";
 import { ModalContext } from "../../contexts/ModalContextProvider";
 import AddPost from "../AddPost";
-import HistoryEntry from "../HistoryEntry";
+import { HistoryEntry } from "../HistoryEntry";
 import historyEntriesService from "../../services/HistoryEntriesService";
 
 export const ListOfHistoryEntries = (props) => {
