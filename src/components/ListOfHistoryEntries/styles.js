@@ -41,7 +41,7 @@ export const Entry = styled.li`
   font-family: ${(props) => props.theme.fontFamily.secondaryFont};
   font-size: 18px;
   font-style: italic;
-  width: 80%;
+  width: 90%;
   padding: 10px;
   margin: 5px 0;
   border: 2px solid transparent;
