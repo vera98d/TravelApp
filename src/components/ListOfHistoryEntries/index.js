@@ -22,23 +22,21 @@ export const ListOfHistoryEntries = (props) => {
       <EntriesList>
         {entriesState.map((entry) => {
           return (
-            <>
-              <Entry
-                key={entry.id}
-                onClick={() => {
-                  modalContext.setDisplayedComponent(
-                    <HistoryEntry
-                      title={entry.title}
-                      city={entry.city}
-                      description={entry.description}
-                      image={entry.image}
-                    />
-                  );
-                }}
-              >
-                {entry.title} – {entry.city}
-              </Entry>
-            </>
+            <Entry
+              key={entry.id}
+              onClick={() => {
+                modalContext.setDisplayedComponent(
+                  <HistoryEntry
+                    title={entry.title}
+                    city={entry.city}
+                    description={entry.description}
+                    image={entry.image}
+                  />
+                );
+              }}
+            >
+              {entry.title} - {entry.city}
+            </Entry>
           );
         })}
       </EntriesList>

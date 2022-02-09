@@ -34,6 +34,7 @@ exports[`Chat is rendering expected elements 1`] = `
     >
       <input
         class="sc-jRQBWg jDqGAV"
+        value=""
       />
       <button
         class="sc-gKclnd kPmtOO"

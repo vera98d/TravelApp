@@ -10,18 +10,26 @@ import {
   Message,
   MessagesList,
 } from "./styles";
+import chatService from "../../services/ChatService";
 
 // TODO: use fetch instead this method
 const getMessages = async () => messagesMock;
 
 export const Chat = (props) => {
   const [messages, setMessages] = useState([]);
+  const [message, setMessage] = useState("");
 
   useEffect(() => {
-    getMessages().then((data) => {
+    chatService.getAll(props.province).then((data) => {
       setMessages(data);
     });
   }, []);
+
+  useEffect(() => {
+    return chatService.onChange(props.province, (newMessage) =>
+      setMessages(messages.concat(newMessage))
+    );
+  }, [props.province, messages]);
 
   return (
     <Container className={props.className}>
@@ -30,14 +38,20 @@ export const Chat = (props) => {
         {messages.map((message) => {
           return (
             <Message key={message.id} isOwn={message.authorId === props.myId}>
-              {message.text}
+              {message.message}
             </Message>
           );
         })}
       </MessagesList>
       <Footer>
-        <Input />
-        <Button type="button">
+        <Input value={message} onChange={(e) => setMessage(e.target.value)} />
+        <Button
+          type="button"
+          onClick={() => {
+            chatService.insert(props.province, message, props.myId);
+            setMessage("");
+          }}
+        >
           <SendIcon />
         </Button>
       </Footer>

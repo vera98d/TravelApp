@@ -3,6 +3,17 @@ import { ThemeProvider } from "styled-components";
 import { theme } from "../../styles";
 import { Chat } from "./Chat";
 import { messagesMock, myIdMock } from "./mocks";
+import chatService from "../../services/ChatService";
+
+let orginalGetAll;
+beforeEach(() => {
+  orginalGetAll = chatService.getAll;
+  chatService.getAll = () => Promise.resolve(messagesMock);
+});
+
+afterEach(() => {
+  chatService.getAll = orginalGetAll;
+});
 
 describe("Chat", () => {
   test("is rendering expected elements", async () => {
@@ -36,10 +47,10 @@ describe("Chat", () => {
     await screen.findAllByRole("listitem");
     const myMessageText = messagesMock.find(
       (message) => message.authorId === myIdMock
-    ).text;
+    ).message;
     const yoursMessageText = messagesMock.find(
       (message) => message.authorId !== myIdMock
-    ).text;
+    ).message;
     const myMessageItem = screen.getByText(myMessageText);
     const yoursMessageItem = screen.getByText(yoursMessageText);
 

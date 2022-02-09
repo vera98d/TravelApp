@@ -18,8 +18,8 @@ const ProvincePage = () => {
         isBackButtonVisible
       />
       <Wrapper>
-        <StyledListOfHistoryEntries province={location.state.province} />{" "}
-        <StyledChat myId={myIdMock} />
+        <StyledListOfHistoryEntries province={location.state.province} />
+        <StyledChat myId={myIdMock} province={location.state.province} />
       </Wrapper>
     </Container>
   );
