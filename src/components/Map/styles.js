@@ -11,6 +11,10 @@ export const StyledMap = styled(MapContainer)`
   width: 600px;
   height: 600px;
   background-color: white;
+
+  a {
+    display: none;
+  }
 `;
 
 export const DefaultProvince = {
