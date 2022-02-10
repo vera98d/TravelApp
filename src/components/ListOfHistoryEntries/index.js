@@ -19,27 +19,37 @@ export const ListOfHistoryEntries = (props) => {
   return (
     <Container className={props.className}>
       <Header>History of entries</Header>
-      <EntriesList>
-        {entriesState.map((entry) => {
-          return (
-            <Entry
-              key={entry.id}
-              onClick={() => {
-                modalContext.setDisplayedComponent(
-                  <HistoryEntry
-                    title={entry.title}
-                    city={entry.city}
-                    description={entry.description}
-                    image={entry.image}
-                  />
-                );
-              }}
-            >
-              {entry.title} - {entry.city}
-            </Entry>
-          );
-        })}
-      </EntriesList>
+      {entriesState.length === 0 ? (
+        <div>
+          <p>
+            There are no entries yet. Be the first to add an entry in the{" "}
+            <span>{props.province}</span> province.
+          </p>
+        </div>
+      ) : (
+        <EntriesList>
+          {entriesState.map((entry) => {
+            return (
+              <Entry
+                key={entry.id}
+                onClick={() => {
+                  modalContext.setDisplayedComponent(
+                    <HistoryEntry
+                      title={entry.title}
+                      city={entry.city}
+                      description={entry.description}
+                      image={entry.image}
+                    />
+                  );
+                }}
+              >
+                {entry.title} - {entry.city}
+              </Entry>
+            );
+          })}
+        </EntriesList>
+      )}
+
       <Button
         type="button"
         onClick={() => {

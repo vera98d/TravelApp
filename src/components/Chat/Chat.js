@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { ReactComponent as SendIcon } from "../../icons/send_icon.svg";
-import { messagesMock } from "./mocks";
 import {
   Button,
   Container,
@@ -11,9 +10,6 @@ import {
   MessagesList,
 } from "./styles";
 import chatService from "../../services/ChatService";
-
-// TODO: use fetch instead this method
-const getMessages = async () => messagesMock;
 
 export const Chat = (props) => {
   const [messages, setMessages] = useState([]);
@@ -44,9 +40,14 @@ export const Chat = (props) => {
         })}
       </MessagesList>
       <Footer>
-        <Input value={message} onChange={(e) => setMessage(e.target.value)} />
+        <Input
+          value={message}
+          placeholder="Please enter your message here..."
+          onChange={(e) => setMessage(e.target.value)}
+        />
         <Button
           type="button"
+          disabled={!message}
           onClick={() => {
             chatService.insert(props.province, message, props.myId);
             setMessage("");

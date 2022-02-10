@@ -58,6 +58,8 @@ export const Button = styled.button`
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
+  font-family: ${(props) => props.theme.fontFamily.secondaryFont};
 `;
 
 export const Message = styled.li`

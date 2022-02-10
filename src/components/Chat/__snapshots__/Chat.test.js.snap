@@ -34,10 +34,12 @@ exports[`Chat is rendering expected elements 1`] = `
     >
       <input
         class="sc-jRQBWg jDqGAV"
+        placeholder="Please enter your message here..."
         value=""
       />
       <button
-        class="sc-gKclnd kPmtOO"
+        class="sc-gKclnd clUQBp"
+        disabled=""
         type="button"
       >
         <svg>

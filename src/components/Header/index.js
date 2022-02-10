@@ -3,7 +3,7 @@ import { ReactComponent as BackIcon } from "../../icons/back_icon.svg";
 import { ReactComponent as LogoutIcon } from "../../icons/logout_icon.svg";
 import authService from "../../services/authService.js";
 import { useAuthState } from "react-firebase-hooks/auth";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { signOut } from "firebase/auth";
 
 const BackButton = (props) => {

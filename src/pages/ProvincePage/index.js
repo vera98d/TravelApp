@@ -4,7 +4,6 @@ import {
   StyledListOfHistoryEntries,
   Wrapper,
 } from "./styles";
-import { myIdMock } from "../../components/Chat/mocks";
 import { Header } from "../../components/Header";
 import { useLocation } from "react-router-dom";
 import authService from "../../services/authService.js";

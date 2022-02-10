@@ -27,7 +27,7 @@ function Login() {
           type="password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
-          placeholder="Put your p assword"
+          placeholder="Put your password"
         />
         <LoginButton
           className="login__btn"

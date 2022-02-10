@@ -8,6 +8,21 @@ export const Container = styled.div`
   height: 600px;
   max-height: 100%;
   border-radius: 12px;
+
+  div {
+    color: grey;
+    font-family: ${(props) => props.theme.fontFamily.secondaryFont};
+    font-size: 24px;
+    padding: 150px 10px;
+    height: 100%;
+    text-align: center;
+
+    p {
+      span {
+        text-transform: capitalize;
+      }
+    }
+  }
 `;
 
 export const Header = styled.h3`
