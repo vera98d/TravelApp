@@ -1,10 +1,11 @@
 import { Container, Title1, Title2, StartButton, Span1 } from "./styles";
 import { useNavigate } from "react-router-dom";
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import authService from "../../services/authService.js";
 import { useAuthState } from "react-firebase-hooks/auth";
 
 export const Intro = () => {
+  const timeoutRef = useRef();
   let navigate = useNavigate();
 
   const [user, loading] = useAuthState(authService.getAuth());
@@ -20,7 +21,7 @@ export const Intro = () => {
   };
 
   const redirect = () => {
-    setTimeout(() => {
+    timeoutRef.current = setTimeout(() => {
       if (user) {
         navigate("/team-jo-project-2/provinces");
       } else {
@@ -31,6 +32,9 @@ export const Intro = () => {
 
   useEffect(() => {
     redirect();
+    return () => {
+      clearTimeout(timeoutRef.current);
+    };
   }, []);
 
   return (
