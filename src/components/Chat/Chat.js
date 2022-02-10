@@ -19,7 +19,7 @@ export const Chat = (props) => {
     chatService.getAll(props.province).then((data) => {
       setMessages(data);
     });
-  }, []);
+  }, [props.province]);
 
   useEffect(() => {
     return chatService.onChange(props.province, (newMessage) =>
