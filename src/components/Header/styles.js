@@ -77,3 +77,8 @@ export const Button = styled.button`
     }
   }
 `;
+
+export const RightButton = styled(Button)`
+  left: initial;
+  right: 10px;
+`;
