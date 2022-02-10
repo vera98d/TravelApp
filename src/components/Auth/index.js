@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import authService from "../../services/authService.js";
 import { useAuthState } from "react-firebase-hooks/auth";
+import { Spinner } from "./styles.js";
 
 export const Auth = (props) => {
   const [user, loading, error] = useAuthState(authService.getAuth());
@@ -13,5 +14,23 @@ export const Auth = (props) => {
     if (user && !props.restricted) navigate("/team-jo-project-2/provinces");
     if (!user && props.restricted) navigate("/team-jo-project-2");
   }, [user, loading]);
+  if (loading) {
+    return (
+      <Spinner>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </Spinner>
+    );
+  }
   return props.children;
 };
