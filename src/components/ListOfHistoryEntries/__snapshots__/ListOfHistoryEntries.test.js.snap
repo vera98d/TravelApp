@@ -1,0 +1,124 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ListOfHistoryEntries matches snapshot 1`] = `
+<div>
+  <div
+    class="sc-gsDKAQ gTnIr"
+  >
+    <h3
+      class="sc-dkPtRN fkbcZJ"
+    >
+      History of entries
+    </h3>
+    <ul
+      class="sc-hKwDye eMHPPf"
+      width="20px"
+    >
+      <li
+        class="sc-eCImPb jUhYUa"
+      >
+        Szlakiem zaginionych
+         – 
+        Kraków
+      </li>
+      <li
+        class="sc-eCImPb jUhYUa"
+      >
+        Trasa Krasnali
+         – 
+        Wrocław
+      </li>
+      <li
+        class="sc-eCImPb jUhYUa"
+      >
+        Piesza wedrówka
+         – 
+        Góry Sowie
+      </li>
+      <li
+        class="sc-eCImPb jUhYUa"
+      >
+        Wycieczka rowerowa
+         – 
+        Kraków
+      </li>
+      <li
+        class="sc-eCImPb jUhYUa"
+      >
+        Narty
+         – 
+        Zieleniec
+      </li>
+      <li
+        class="sc-eCImPb jUhYUa"
+      >
+        Weekend w SPA
+         – 
+        Wieniec-Zdrój
+      </li>
+      <li
+        class="sc-eCImPb jUhYUa"
+      >
+        Może nad morze
+         – 
+        Mielno
+      </li>
+      <li
+        class="sc-eCImPb jUhYUa"
+      >
+        Powrót do rodzinnych stron
+         – 
+        Przemyśl
+      </li>
+      <li
+        class="sc-eCImPb jUhYUa"
+      >
+        Ciemne strony Dolnego Śląska
+         – 
+        Dolny Śląsk
+      </li>
+      <li
+        class="sc-eCImPb jUhYUa"
+      >
+        Zjazd rowerowy ze Ślęzy
+         – 
+        Sobótka
+      </li>
+      <li
+        class="sc-eCImPb jUhYUa"
+      >
+        Rowerem przez wybrzeże
+         – 
+        Polska
+      </li>
+      <li
+        class="sc-eCImPb jUhYUa"
+      >
+        Śladami zwierząt
+         – 
+        Puszcza Białowieska
+      </li>
+      <li
+        class="sc-eCImPb jUhYUa"
+      >
+        W krainie jezior
+         – 
+        Mazury
+      </li>
+      <li
+        class="sc-eCImPb jUhYUa"
+      >
+        Na szczyt
+         – 
+        Tatry
+      </li>
+    </ul>
+    <button
+      class="sc-bdvvtL sc-jRQBWg eHPgEv icFjEr"
+      type="button"
+    >
+      Create new story
+    </button>
+  </div>
+</div>
+`;
