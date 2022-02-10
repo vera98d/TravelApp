@@ -20,22 +20,21 @@ export const Intro = () => {
     }
   };
 
-  const redirect = () => {
-    timeoutRef.current = setTimeout(() => {
-      if (user) {
-        navigate("/team-jo-project-2/provinces");
-      } else {
-        navigate("login");
-      }
-    }, 15000);
-  };
-
   useEffect(() => {
+    const redirect = () => {
+      timeoutRef.current = setTimeout(() => {
+        if (user) {
+          navigate("/team-jo-project-2/provinces");
+        } else {
+          navigate("login");
+        }
+      }, 15000);
+    };
     redirect();
     return () => {
       clearTimeout(timeoutRef.current);
     };
-  }, []);
+  }, [navigate, user]);
 
   return (
     <Container>
