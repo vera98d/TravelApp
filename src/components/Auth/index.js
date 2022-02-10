@@ -5,7 +5,7 @@ import { useAuthState } from "react-firebase-hooks/auth";
 import { Spinner } from "./styles.js";
 
 export const Auth = (props) => {
-  const [user, loading, error] = useAuthState(authService.getAuth());
+  const [user, loading] = useAuthState(authService.getAuth());
   const navigate = useNavigate();
   useEffect(() => {
     if (loading) {
@@ -13,7 +13,7 @@ export const Auth = (props) => {
     }
     if (user && !props.restricted) navigate("/team-jo-project-2/provinces");
     if (!user && props.restricted) navigate("/team-jo-project-2");
-  }, [user, loading]);
+  }, [user, loading, props.restricted, navigate]);
   if (loading) {
     return (
       <Spinner>

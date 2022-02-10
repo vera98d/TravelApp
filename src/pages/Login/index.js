@@ -13,7 +13,7 @@ function Login() {
     <div className="login">
       <Header
         title="Login and let's travel"
-        subtitle="read entries, create your story and chat with antother travellers"
+        subtitle="read entries, create your story and chat with other travellers"
         isBackButtonVisible
       />
       <Container>
@@ -21,13 +21,13 @@ function Login() {
           type="text"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
-          placeholder="Put your e-mail address"
+          placeholder="Enter your e-mail address"
         />
         <Input
           type="password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
-          placeholder="Put your password"
+          placeholder="Enter your password"
         />
         <LoginButton
           className="login__btn"

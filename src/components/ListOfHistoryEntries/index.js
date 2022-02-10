@@ -22,7 +22,7 @@ export const ListOfHistoryEntries = (props) => {
       {entriesState.length === 0 ? (
         <div>
           <p>
-            There are no entries yet. Be the first to add an entry in the{" "}
+            There are no entries yet. Be the first user to add an entry in the{" "}
             <span>{props.province}</span> province.
           </p>
         </div>
@@ -43,7 +43,7 @@ export const ListOfHistoryEntries = (props) => {
                   );
                 }}
               >
-                {entry.title} - {entry.city}
+                {entry.title} – {entry.city}
               </Entry>
             );
           })}

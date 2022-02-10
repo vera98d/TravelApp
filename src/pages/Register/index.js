@@ -18,7 +18,7 @@ function Register() {
     <div className="register">
       <Header
         title="Register and let's travel"
-        subtitle="read entries, create your story and chat with antother travellers"
+        subtitle="read entries, create your story and chat with other travellers"
         isBackButtonVisible
       />
       <Container>
