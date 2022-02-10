@@ -26,19 +26,19 @@ function Register() {
           type="text"
           value={name}
           onChange={(e) => setName(e.target.value)}
-          placeholder="Put your user name"
+          placeholder="Enter your user name"
         />
         <Input
           type="text"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
-          placeholder="Put your e-mail adress"
+          placeholder="Enter your e-mail adress"
         />
         <Input
           type="password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
-          placeholder="Put your password"
+          placeholder="Enter your password"
         />
         <RegisterButton onClick={register}>Register</RegisterButton>
         <HaveAccountText>

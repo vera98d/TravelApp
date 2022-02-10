@@ -1,10 +1,15 @@
 import { MapContainer } from "react-leaflet";
 import styled from "styled-components";
+import gif from "../../../src/bike.gif";
 
 export const Container = styled.div`
   display: flex;
   justify-content: center;
   padding: 40px 20px;
+  background-image: url(${gif});
+  background-size: 400px;
+  background-repeat: no-repeat;
+  background-position: bottom left;
 `;
 
 export const StyledMap = styled(MapContainer)`
