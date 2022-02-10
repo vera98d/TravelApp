@@ -17,7 +17,7 @@ import ImageInput from "../ImageInput";
 import uploadImg from "./img/upload.svg";
 import { PrimaryButton } from "../../styles";
 
-function AddPost(props) {
+function AddHistoryEntry(props) {
   const { handleChange, values, handleSubmit, errors, handleImage, loading } =
     useForm(props.province);
 
@@ -93,4 +93,4 @@ function AddPost(props) {
   }
 }
 
-export default AddPost;
+export default AddHistoryEntry;

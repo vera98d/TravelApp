@@ -1,7 +1,7 @@
 import { useEffect, useState, useContext } from "react";
 import { Button, Container, Entry, EntriesList, Header } from "./styles";
 import { ModalContext } from "../../contexts/ModalContextProvider";
-import AddPost from "../AddPost";
+import AddHistoryEntry from "../AddHistoryEntry";
 import { HistoryEntry } from "../HistoryEntry";
 import historyEntriesService from "../../services/HistoryEntriesService";
 
@@ -44,7 +44,7 @@ export const ListOfHistoryEntries = (props) => {
         type="button"
         onClick={() => {
           modalContext.setDisplayedComponent(
-            <AddPost province={props.province} />
+            <AddHistoryEntry province={props.province} />
           );
         }}
       >

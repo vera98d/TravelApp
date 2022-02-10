@@ -1,0 +1,58 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`is rendering expected elements 1`] = `
+<div>
+  <h2>
+    New story
+  </h2>
+  <form
+    class="sc-gsDKAQ bIehX"
+  >
+    <input
+      class="sc-dkPtRN ddWviv"
+      id="title"
+      name="title"
+      placeholder="Type title of your journey"
+      type="text"
+      value=""
+    />
+    <input
+      class="sc-dkPtRN ddWviv"
+      id="city"
+      name="city"
+      placeholder="Type city of your journey"
+      type="text"
+      value=""
+    />
+    <textarea
+      class="sc-hKwDye fLiIyJ"
+      id="description"
+      name="description"
+      placeholder="Describe your story"
+    />
+    <div
+      class="sc-eCImPb eBCwcJ"
+    >
+      <label
+        for="file-input"
+      >
+        <img
+          class="sc-hBUSln JbMTg"
+          src="addImageButton.svg"
+        />
+      </label>
+      <input
+        class="sc-bqiRlB UdnLw"
+        id="file-input"
+        type="file"
+      />
+      <button
+        class="sc-bdvvtL eHPgEv"
+        type="submit"
+      >
+        Add story
+      </button>
+    </div>
+  </form>
+</div>
+`;
