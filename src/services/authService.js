@@ -6,19 +6,11 @@ import {
   signInWithEmailAndPassword,
   signOut,
 } from "firebase/auth";
+import { app } from "./firebase";
 
 class AuthService {
-  constructor() {
-    const firebaseConfig = {
-      apiKey: "AIzaSyCMfnnUGYTXhdXkFZqeShFEIdOQIyPD_-c",
-      authDomain: "team-jo-project2.firebaseapp.com",
-      projectId: "team-jo-project2",
-      storageBucket: "team-jo-project2.appspot.com",
-      messagingSenderId: "234842686074",
-      appId: "1:234842686074:web:868ca8b5750c7079e631c3",
-    };
-    const app = initializeApp(firebaseConfig);
-    this.auth = getAuth(app);
+  constructor(firebaseApp) {
+    this.auth = getAuth(firebaseApp);
   }
 
   getAuth = () => this.auth;
@@ -57,4 +49,4 @@ class AuthService {
   };
 }
 
-export default new AuthService();
+export default new AuthService(app);

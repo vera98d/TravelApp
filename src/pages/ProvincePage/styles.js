@@ -14,6 +14,7 @@ export const Wrapper = styled.div`
   margin: 0 auto;
   padding: 40px 20px;
   max-width: 1500px;
+  width: 100%;
   gap: 60px;
   @media screen and (max-width: 1150px) {
     gap: 30px;

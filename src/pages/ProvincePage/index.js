@@ -7,9 +7,15 @@ import {
 import { myIdMock } from "../../components/Chat/mocks";
 import { Header } from "../../components/Header";
 import { useLocation } from "react-router-dom";
+import authService from "../../services/authService.js";
+import { useAuthState } from "react-firebase-hooks/auth";
 
 const ProvincePage = () => {
+  const [user, loading] = useAuthState(authService.getAuth());
   const location = useLocation();
+  if (loading || !user) {
+    return null;
+  }
   return (
     <Container>
       <Header
@@ -19,7 +25,7 @@ const ProvincePage = () => {
       />
       <Wrapper>
         <StyledListOfHistoryEntries province={location.state.province} />
-        <StyledChat myId={myIdMock} province={location.state.province} />
+        <StyledChat myId={user.uid} province={location.state.province} />
       </Wrapper>
     </Container>
   );
