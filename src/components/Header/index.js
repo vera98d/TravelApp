@@ -26,7 +26,7 @@ const LogoutButton = (props) => {
   }
   const handleButtonClick = () => {
     signOut(authService.getAuth()).then(() => {
-      navigate("/team-jo-project-2");
+      navigate("/");
     });
   };
   return (

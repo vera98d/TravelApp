@@ -18,10 +18,9 @@ const Map = () => {
   ) => {
     layer.on({
       click: (event) => {
-        navigate(
-          `/team-jo-project-2/provinces/${event.target.feature.properties.id}`,
-          { state: { province: event.target.feature.properties.nazwa } }
-        );
+        navigate(`/provinces/${event.target.feature.properties.id}`, {
+          state: { province: event.target.feature.properties.nazwa },
+        });
       },
 
       mouseover: (event) => {

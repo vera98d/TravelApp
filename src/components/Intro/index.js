@@ -14,7 +14,7 @@ export const Intro = () => {
       return;
     }
     if (user) {
-      navigate("/team-jo-project-2/provinces");
+      navigate("/provinces");
     } else {
       navigate("login");
     }
@@ -24,7 +24,7 @@ export const Intro = () => {
     const redirect = () => {
       timeoutRef.current = setTimeout(() => {
         if (user) {
-          navigate("/team-jo-project-2/provinces");
+          navigate("/provinces");
         } else {
           navigate("login");
         }

@@ -11,8 +11,8 @@ export const Auth = (props) => {
     if (loading) {
       return;
     }
-    if (user && !props.restricted) navigate("/team-jo-project-2/provinces");
-    if (!user && props.restricted) navigate("/team-jo-project-2");
+    if (user && !props.restricted) navigate("/provinces");
+    if (!user && props.restricted) navigate("/");
   }, [user, loading, props.restricted, navigate]);
   if (loading) {
     return (

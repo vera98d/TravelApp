@@ -16,7 +16,7 @@ const Container = styled.div`
 function App() {
   return (
     <Routes>
-      <Route path="/team-jo-project-2">
+      <Route path="/">
         <Route
           index
           element={

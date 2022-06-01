@@ -42,8 +42,7 @@ function Register() {
         />
         <RegisterButton onClick={register}>Register</RegisterButton>
         <HaveAccountText>
-          Already have an account?{" "}
-          <Link to="/team-jo-project-2/login">Login</Link> now.
+          Already have an account? <Link to="/login">Login</Link> now.
         </HaveAccountText>
       </Container>
     </div>
