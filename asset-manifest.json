@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.js": "/TravelApp/static/js/main.f8a1ac84.js",
+    "static/js/787.e8826133.chunk.js": "/TravelApp/static/js/787.e8826133.chunk.js",
+    "static/media/introImage.jpg": "/TravelApp/static/media/introImage.f590c86d6b565bbd6f21.jpg",
+    "static/media/bike.gif": "/TravelApp/static/media/bike.902ae1d2781bd134ffac.gif",
+    "static/media/addImageButton.svg": "/TravelApp/static/media/addImageButton.972fe20cd755a52ea3af46e4b6c221f2.svg",
+    "index.html": "/TravelApp/index.html",
+    "static/media/closeButton.svg": "/TravelApp/static/media/closeButton.21924441ccab3a1a45fc78f07c212dfa.svg",
+    "static/media/upload.svg": "/TravelApp/static/media/upload.cf4019e03be362df5471d33d8df935a1.svg",
+    "static/media/logout_icon.svg": "/TravelApp/static/media/logout_icon.a6eede602c48d1c74ad404c95d68bcb8.svg",
+    "static/media/send_icon.svg": "/TravelApp/static/media/send_icon.8ea1b6b23c920c300c23df209d333490.svg",
+    "static/media/back_icon.svg": "/TravelApp/static/media/back_icon.1c39f672774a9d39b5a6b682825df85f.svg",
+    "main.f8a1ac84.js.map": "/TravelApp/static/js/main.f8a1ac84.js.map",
+    "787.e8826133.chunk.js.map": "/TravelApp/static/js/787.e8826133.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.f8a1ac84.js"
+  ]
+}
