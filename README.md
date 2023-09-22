@@ -1,4 +1,4 @@
-# TravelApp | Team Project | Coders Camp 2021
+# TravelApp
 
 This aplication is dedicated for travellers. Aplication is divided into provinces. Each province has it's own chat and posts. User can create account, and after logging in they can add posts with pictures, and chat with other users in choosen province.
 
